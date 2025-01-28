@@ -1,12 +1,18 @@
-﻿<Window x:Class="bloc_csharp.MainWindow"
+﻿<Window x:Class="BlocDeNotas.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:bloc_csharp"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Bloc de Notas" Height="450" Width="800">
     <Grid>
-        
+        <!-- Menú superior -->
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Archivo">
+                <MenuItem Header="Limpiar" Click="LimpiarMenuItem_Click"/>
+                <MenuItem Header="Abrir" Click="AbrirMenuItem_Click"/>
+                <MenuItem Header="Guardar" Click="GuardarMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Caja de texto para el contenido -->
+        <TextBox Name="textBox" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,30,0,0" AcceptsReturn="True" />
     </Grid>
 </Window>
